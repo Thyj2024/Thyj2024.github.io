@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新学期历险记</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="container">
+            <h1>欢迎来到新学期历险游戏!</h1>
+            <div class="button-container">
+                <button
+                    style="margin-top:10px ;margin-bottom: 10px;padding: 5px;background-color: azure;border-radius: 5px;"
+                    id="toggleButton">
+                    开启音乐<br><br>
+                    获取更好的游戏体验
+                </button>
+                <h2 id="time" style="font-size: 50px;"></h2>
+            </div>
+            <audio id="myAudio" controls>
+                <source src="青石巷 - 魏琮霏.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <script>
+                var audio = document.getElementById("myAudio");
+                var toggleButton = document.getElementById("toggleButton");
+
+                toggleButton.addEventListener("click", function () {
+                    if (audio.paused) {
+                        audio.play();
+                        audio.loop = true; // 添加这行代码
+                        toggleButton.textContent = "关闭音乐";
+                    } else {
+                        audio.pause();
+                        toggleButton.textContent = "开启音乐";
+                    }
+                });
+            </script>
+
+            <div class="button-container">
+                <button class="button1" onclick="mybutton()">点击开启你的学期旅程</button>
+            </div>
+            <br>
+            <br>
+            <a href="https://www.cuc.edu.cn/"><img src="121790169837266422.jpg" alt="图像显示失败"></a>
+            <p>点击图片进入学校官网</p>
+            <!-- 清除内容 -->
+            <script src="三月.js">
+            </script>
+            <audio id="Audio1" src="按键音.mp3"></audio>
+            
+        </div>
+    </div>
+</body>
+
+</html>
