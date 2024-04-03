@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三月</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center">
+    <div class="container">
+    <div class="body">
+    <h1>刚开学课业压力不是很大，空闲时间将近60小时,你选择……<br>
+        （每次选择都会用掉20小时的时间哟）</h1>
+    <br>
+    <br>
+    <form action="{{ url_for('wjuzji') }}">
+        <input type="submit" value="在宿舍玩会手机吧" class="button">
+    </form>
+    <br>
+    <br>
+    <form action="{{ url_for('duuu') }}">
+        <input type="submit" value="读一读感兴趣的书吧" class="button">
+    </form>
+    <br>
+    <br>
+    <form action="{{ url_for('fuxi') }}">
+        <input type="submit" value="感觉学的知识还没掌握，复习吧" class="button">
+    </form>
+    <br>
+    <br>
+    <form action="{{ url_for('iuqu') }}">
+        <input type="submit" value="出去逛逛，看看音乐剧电影吧" class="button">
+    </form>
+    <br>
+    <br>
+    <form action="{{ url_for('drlm') }}">
+        <input type="submit" value="最近运动没跟上，锻炼锻炼身体吧" class="button">
+    </form>
+    <br>
+    <br>
+    <form action="{{ url_for('vvju') }}">
+        <input type="submit" value="有新的电视剧出来了诶，追追剧吧" class="button">
+    </form>
+    <br>
+    <br>
+    <audio controls autoplay>
+      <source src="{{ url_for('static', filename='按键音.mp3') }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+        </audio>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

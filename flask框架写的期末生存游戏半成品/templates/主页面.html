@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="container">
+            <h1 class="title">{{ title }}</h1>
+            <br>
+            <form action="{{ url_for('sjyt') }}">
+                <input type="submit" value="确定" class="button1">
+            </form>
+            <br>
+            <a href="https://www.cuc.edu.cn/">学校官网</a>
+            <br>
+            <br>
+            <img src="/static/cuc2.jpg" alt="图像显示失败">
+            <p style="color:purple;">这里是终点，也是起点。</p>
+            <br>
+            <br>
+            <audio id="myAudio" controls autoplay>
+                <source src="/static/青石巷 - 魏琮霏.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+
+        </div>
+    </div>
+
+    <script>
+        // 获取音频元素
+        var audio = document.getElementById("myAudio");
+
+        // 监听音频播放结束事件
+        audio.addEventListener("ended", function () {
+            // 当音频播放结束时，重新播放
+            audio.play();
+        });
+
+
+// 通过上述代码，当音频播放结束时，会触发 `ended` 事件，然后重新调用 `play()` 方法来再次播放音频。
+    </script>
+</body>
+
+</html>

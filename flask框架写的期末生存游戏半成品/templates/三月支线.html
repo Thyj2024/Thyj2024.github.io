@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三月</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+    <body>
+    <div class="center">
+    <div class="container">
+    <div class="body">
+    <h1>第二天早八，由于你前一天睡得很晚错过了闹钟
+        你看了眼时间：</h1>
+    <br>
+    <br>
+    <form action="{{ url_for('buquzcba') }}">
+        <input type="submit" value="都这个点了，要不不去了……" class="button">
+    <br>
+    <br>
+    <form action="{{ url_for('gjquuhke') }}">
+        <input type="submit" value="赶紧起来赶紧起来，再不起来就真的缺勤了" class="button">
+    <br>
+    <br>
+    <audio controls autoplay>
+      <source src="{{ url_for('static', filename='按键音.mp3') }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+        </audio>
+    </form>
+    </div>
+    </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三月</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center">
+    <div class="container">
+    <div class="body">
+    <h1>现在是三月，这是新学期的第一个月，你决定……</h1>
+    <br>
+    <br>
+    <form action="{{ url_for('不能错过') }}">
+        <input type="submit" value="认真听课，认识新老师" class="button">
+    </form>
+    <br>
+    <br>
+    <form action="{{ url_for('sjyt') }}">
+        <input type="submit" value="还在放假的余韵中，不想上课" class="button">
+    </form>
+    <br>
+    <br>
+    <audio controls autoplay>
+      <source src="{{ url_for('static', filename='按键音.mp3') }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+        </audio>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

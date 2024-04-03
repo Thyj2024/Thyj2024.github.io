@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>三月</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <iframe src="/static/music.html" style="display:none;"></iframe>
+    <div class="center">
+        <div class="container">
+            <div class="body">
+                <h1>现在是三月，这是新学期的第一个月，你决定……</h1>
+                <br>
+                <br>
+                <form action="{{ url_for('uhke') }}">
+                    <input type="submit" value="认真听课，认识新老师" class="button">
+                </form>
+                <br>
+                <br>
+                <form action="{{ url_for('buuhke') }}">
+                    <input type="submit" value="还在放假的余韵中，不想上课" class="button">
+                </form>
+                <br>
+                <br>
+                <audio controls autoplay>
+                    <source src="{{ url_for('static', filename='按键音.mp3') }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio id="myAudio" controls autoplay>
+                    <source src="path/to/your/audio/file.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            
+                
+                <!-- 请确保 `src` 属性中的路径指向相同的音频文件。 -->
+                <script>// 获取音频元素
+                    var audio = document.getElementById("myAudio");
+                    
+                    // 监听音频播放结束事件
+                    audio.addEventListener("ended", function() {
+                        // 当音频播放结束时，重新播放
+                        audio.play();
+                    });
+                    
+                    
+                    // 通过上述代码，当音频播放结束时，会触发 `ended` 事件，然后重新调用 `play()` 方法来再次播放音频。</script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

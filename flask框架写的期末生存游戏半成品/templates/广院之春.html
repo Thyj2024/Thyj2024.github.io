@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三月</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+    <body>
+    <div class="center">
+    <div class="container">
+    <div class="body">
+    <h1>广院之春也要举行了，<br>
+        你在第一时间看到了转发集赞的公众号，<br>
+        你选择……</h1>
+    <br>
+    <br>
+    <form action="{{ url_for('susuvrfa') }}">
+        <input type="submit" value="速速转发获取门票去看表演" class="button">
+    <br>
+    <br><br>
+    <form action="{{ url_for('doxqxihvba') }}">
+        <input type="submit" value="还是多休息会吧" class="button">
+    <br>
+    <br>
+    <audio controls autoplay>
+      <source src="{{ url_for('static', filename='按键音.mp3') }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+        </audio>
+    </form>
+    </div>
+    </div>
+    </div>
+    </body>
+</html>
