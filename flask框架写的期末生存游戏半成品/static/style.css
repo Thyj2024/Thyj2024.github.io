@@ -1,0 +1,65 @@
+.container {
+  font-size: 16px;
+  color: rgba(5,7,4,0.9);
+  background-color: rgba(0,255,0,0.1);
+  padding: 30px;
+  border: 2px solid #ccc;
+  text-align: center;
+  margin:40px
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.title {
+  background-color: rgba(255,0,0,0.1);
+  padding: 10px;
+  border: 2px solid #ccc;
+  text-align: center;
+}
+
+.body {
+    background-image: url("\static\青石巷 - 魏琮霏.mp3");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.button {
+  background-color: rgba(255,0,0,0.1);
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  text-align: center;
+  width: 400px;
+}
+
+.button1 {
+  background-color: rgba(0,0,200,0.1);
+  padding: 0px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  text-align: center;
+  width: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .button {
+    width: 300px;
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  .button1 {
+    width: 40px;
+    font-size: 14px;
+  }
+}
+
+
