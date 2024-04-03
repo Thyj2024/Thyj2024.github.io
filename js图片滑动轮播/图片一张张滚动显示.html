@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flexbox {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        ul {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        ul li.active {
+            opacity: 1;
+        }
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexbox">
+        <ul id="imageSlider">
+            <li><img src="./img/下载 (2).jpg" alt="Image 1"></li>
+            <li><img src="./img/下载 (3).jpg" alt="Image 2"></li>
+            <li><img src="./img/下载 (4).jpg" alt="Image 3"></li>
+        </ul>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('#imageSlider li');
+            let index = 0; // 当前显示的图片索引
+
+            // 初始化，只显示第一张图片
+            slides[index].classList.add('active');
+
+            setInterval(() => {
+                // 移除当前图片的active类，使其不可见
+                slides[index].classList.remove('active');
+
+                // 计算下一张图片的索引
+                index = (index + 1) % slides.length; // 保证索引值不会超出范围
+
+                // 显示下一张图片
+                slides[index].classList.add('active');
+            }, 2000); // 每1000毫秒（1秒）切换一次
+        });
+    </script>
+</body>
+
+</html>

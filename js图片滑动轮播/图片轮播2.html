@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到我的网页😘</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        li {
+            list-style: none;
+            width: 300px;
+            float: left;
+            padding-right: 5px;
+        }
+
+        /*TODO:块级元素，占一行并且从上至下排布 */
+
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .flexbox {
+            width: 920px;
+            height: 260px;
+            overflow: hidden;
+            position: relative;/*TODO:IMPORTANT*/
+        }
+        ul{
+            position: relative;/*TODO:IMPORTANT*/
+        }
+
+        #bu1 {
+            text-align: center;
+        }
+
+        .bu2 {
+            width: 120px;
+            height: 50px;
+            margin-top: 20px;
+            margin-right: 20px;
+            background-color: blanchedalmond;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexbox">
+        <ul>
+            <li><img src="./img\下载 (2).jpg" alt=""></li>
+            <li><img src="./img\下载 (3).jpg" alt=""></li>
+            <li><img src="./img\下载 (4).jpg" alt=""></li>
+        </ul>
+
+        <div id="bu1">
+            <button class="bu2">《《《向左滑动</button><!-- TODO:行内块级元素 -->
+            <button class="bu2">向右滑动》》》</button>
+        </div>
+    </div>
+    <script>
+
+        let alist = document.querySelector("ul");
+        alist.innerHTML += alist.innerHTML;
+        let ali = document.querySelectorAll("li");
+        let abu = document.querySelectorAll(".bu2");
+        alist.style.width = ali[0].offsetWidth * ali.length + "px";
+        let speed = -2;
+        let move = () => {
+            if (alist.offsetLeft < -alist.offsetWidth / 2) {
+                alist.style.left = "0"
+            }
+            if (alist.offsetLeft > 0) {
+                alist.style.left = -alist.offsetWidth / 2 + "px";
+            }
+            alist.style.left = alist.offsetLeft + speed + "px"
+        }
+        let timer = setInterval(move, 30);
+
+        // TODO:鼠标放置上去轮播停止
+        alist.addEventListener("mouseover", function () {
+            clearInterval(timer);
+        });
+        alist.addEventListener("mouseout", function () {
+            timer = setInterval(move, 30)
+        })
+
+        //TODO:按钮运动方向
+        abu[0].onclick = function () {
+            speed = -2
+        }
+        abu[1].onclick = function () {
+            speed = 2
+        }
+
+
+    </script>
+</body>
+
+</html>
