@@ -1,0 +1,54 @@
+header {
+    padding: auto;
+    text-align: center;
+    box-shadow: 0px 10px 30px hsla(0, 84%, 93%, 0.2);
+    /* backdrop-filter: blur(2px); */
+    position: fixed;
+    /* TODO:固定定位使元素脱离文档流，下面是解决方法 */
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    margin-top: 0px;
+    z-index: 5;
+
+}
+
+
+header ul {
+    list-style: none;
+
+}
+
+header ul li {
+    margin-right: 5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+
+}
+
+header ul li a {
+    text-decoration: none;
+    color: black;
+    line-height: 53.68px;
+}
+
+header ul li:hover a {
+    color: red;
+}
+
+.li_bar,
+a {
+    display: inline-block;
+}
+
+header ul img {
+    width: 53.68px;
+}
+
+header ul li a,
+li img {
+    vertical-align: top;
+    /* TODO:，img 元素默认是以基线对齐的，这意味着图片的底部会与周围文本的基线对齐，而不是与容器的顶部或底部对齐。这种行为可能会导致图片和文本（或其他元素）之间出现视觉上的错位。 */
+}

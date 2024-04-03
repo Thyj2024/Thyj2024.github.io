@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息管理</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- TODO:日期选择器 -->
+    <link href="./css/myinfo.css" rel="stylesheet">
+    <link href="./css/header.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li class="li_bar"><img src="img\cuc001_realistic_art_a_lazy_cat_1ca43c97-c4e2-47aa-8239-6296b68e5299.webp"
+                    alt=""></li>
+            <li class="li_bar"><a href="#">首页</a></li>
+            <li class="li_bar"><a href="#">作品</a></li>
+            <li class="li_bar"><a href="shop.html">社区</a></li>
+            <li class="li_bar"><a href="login.html" target="_blank">登录</a></li>
+            <li class="li_bar"><a href="myinfo.html">我的</a></li>
+    
+        </ul>
+    </header>
+    <br>
+    <br><br><br>
+    <div class="body">
+        <!-- TODO:name和value有用户自定义，主要供后台人员使用 -->
+        <form action="myinfo.php" method="post" name="myForm" onsubmit="return validateForm(event)">
+            <div class="container">
+                <div>
+                    <h5>请选择你的头像</h5>
+                    <input type="file" name="img">
+                    <h5>请填写你的昵称</h5>
+                    <div class="input-group" required><!-- TODO:require表示必填 -->
+                        <input type="text" name="nickname" value="请输入10个字符以内的昵称" maxlength="10">
+                    </div>
+                    <h5>请选择你的爱好</h5>
+                    <!-- TODO:checkbox复选框，可以实现多选 -->
+                    <div class="hobby">
+                        <input type="checkbox" name="hobby[]">唱歌
+                        <input type="checkbox" name="hobby[]">跳舞
+                        <input type="checkbox" name="hobby[]">弹钢琴
+                        <input type="checkbox" name="hobby[]">看书
+                        <input type="checkbox" name="hobby[]">敲代码
+                    </div>
+                    <h5>用一句话来介绍自己吧</h5>
+                    <div class="input-group">
+                        <textarea name="introduction" id="" cols="30" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div>
+                    <h5>请选择你的性别</h5>
+                    <!-- TODO:name是表单元素名字，单选按钮和复选框必须有相同的名字name -->
+                    <label for=""><input type="radio" name="gender" checked>女</label><!--TODO:checked表示默认选中-->
+                    <label for="man"></label><input type="radio" id="man" name="gender">男
+                    <label for="no"></label><input type="radio" id="no" name="gender">非二元性别
+                    <h5>请选择你的出生日期</h5>
+                    <div class="input-group">
+                        <input type="text" id="birthday" name="birthday" required>
+                    </div>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+                    <script>
+                        $(function () {
+                            $("#birthday").datepicker({
+                                dateFormat: 'yy-mm-dd' // 设置日期格式
+                            });
+                        });
+                    </script>
+                    <h5>请选择你所在的地区</h5>
+                    <select name="area" id="area1">
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="广州">广州</option>
+                        <option value="深圳">深圳</option>
+                    </select>
+                </div>
+                <div>
+                    <h5>请填写你的手机号</h5>
+                    <div class="input-group">
+                        <input type="number" name="phone_num" maxlength="11" required>
+                        <!-- TODO:maxlength 属性用于限制输入字段的最大字符数，对于 <input type="number"> 标签来说，maxlength 属性并不适用。 -->
+                    </div>
+                    <h5>请填写你的电子邮箱地址</h5>
+                    <div class="input-group">
+                        <input type="email" name="email" required>
+                    </div>
+                </div>
+                <br>
+                <div class="button-group submit">
+                    <button type="submit">提交修改</button>
+                    <button type="reset">重置信息</button>
+                </div>
+                <br>
+                <br>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm(event) {
+            var nickname = document.forms["myForm"]["nickname"].value;
+            var introduction = document.forms["myForm"]["introduction"].value;
+            var phone_num = document.forms["myForm"]["phone_num"].value;
+            var email = document.forms["myForm"]["email"].value;
+
+            if (nickname == "" || introduction == "" || phone_num == "" || email == "") {
+                alert("请填写所有必填字段。");
+                // 阻止表单的默认提交行为
+                event.preventDefault();
+                return false;
+            }
+        }
+    </script>
+    <!-- TODO:验证输入是否为空值 -->
+</body>
+
+</html>

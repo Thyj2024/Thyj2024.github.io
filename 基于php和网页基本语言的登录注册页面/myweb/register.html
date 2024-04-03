@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li class="li_bar"><img src="img\cuc001_realistic_art_a_lazy_cat_1ca43c97-c4e2-47aa-8239-6296b68e5299.webp"
+                    alt=""></li>
+            <li class="li_bar"><a href="#">首页</a></li>
+            <li class="li_bar"><a href="#">作品</a></li>
+            <li class="li_bar"><a href="shop.html">社区</a></li>
+            <li class="li_bar"><a href="login.html" target="_blank">登录</a></li>
+            <li class="li_bar"><a href="myinfo.html">我的</a></li>
+    
+        </ul>
+    </header>
+    <div class="body">
+        <form action="register.php" method="post">
+            <br><br>
+            <br><br>
+
+            <div class="container">
+                <div class="form-container">
+
+
+                    <h2 style="text-align: center;">注册</h2>
+                    <div class="input-group" style="margin: auto;">
+                        <label for="registerUsername">用户名:</label>
+                        <input type="text" id="registerUsername" name="username" required>
+                    </div>
+                    <div class="input-group" style="margin: auto;">
+                        <label for="registerPassword">密码:</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                    </div>
+                    <div class="input-group" style="margin: auto;">
+                        <label for="registerPassword">请再次输入你的密码:</label>
+                        <input type="password" id="registerPassword" name="tpassword" required>
+                    </div>
+                    <div class="input-group" style="margin: auto;">
+                        <label for="registerEmail">邮箱:</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="button-group">
+                        <input type="submit" name="reg" value="注册">
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="login.html" style="color: rgb(212, 212, 212);">已经有账号了，去登录吧</a>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

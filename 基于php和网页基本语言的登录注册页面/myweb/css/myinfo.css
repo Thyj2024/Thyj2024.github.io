@@ -1,0 +1,128 @@
+body {
+    background-image: url("../img/下载 (2).jpg");
+    background-color: rgb(237, 250, 249);
+    background-size: cover;
+    /* 图片将被缩放以填充整个容器 */
+    background-position: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    text-align: center;
+}
+
+.container {
+    width: 60vh;
+    text-align: left;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    /* border: 1px solid #999; */
+    padding: 50px;
+    border-radius: 20px;
+
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* 确保padding不会影响总宽度 */
+}
+
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* 确保padding不会影响总宽度 */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+#area {
+    width: 78%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* 确保padding不会影响总宽度 */
+}
+
+#area:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+#area1 {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* 确保padding不会影响总宽度 */
+}
+
+#area:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+
+.button-group button {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+.button-group button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.submit {
+    position: absolute;
+    /* TODO:让button水平居中 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* TODO:往左退自身宽度的一半 */
+
+}

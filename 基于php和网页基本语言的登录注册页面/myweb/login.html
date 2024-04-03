@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <title>登录</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li class="li_bar"><img src="img\cuc001_realistic_art_a_lazy_cat_1ca43c97-c4e2-47aa-8239-6296b68e5299.webp" alt=""></li>
+            <li class="li_bar"><a href="#">首页</a></li>
+            <li class="li_bar"><a href="#">作品</a></li>
+            <li class="li_bar"><a href="shop.html">社区</a></li>
+            <li class="li_bar"><a href="login.html" target="_blank">登录</a></li>
+            <li class="li_bar"><a href="myinfo.html">我的</a></li>
+    
+        </ul>
+    </header>
+    <div class="body">
+    <form action="login.php" method="post">
+        <br><br>
+        <br><br>
+
+        <div class="container">
+            <div class="form-container">
+
+                <h2 style="text-align: center;">登录</h2>
+                <br>
+                <div class="input-group" style="margin: auto;">
+                    <label for="loginUsername">用户名:</label>
+                    <input type="text" id="loginUsername" name="username" required>
+                </div>
+                <div class="input-group" style="margin: auto;">
+                    <label for="registerPassword">密码:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <br>
+                <div class="button-group">
+                    <input type="submit" name="log" value="登录">
+                </div>
+                <br>
+                <div style="text-align: center;">
+                <a href="register.html" style="color:  rgb(212, 212, 212);">还没有账号，前往注册</a></div>
+                <br>
+
+            </div>
+        </div>
+</div>
+</body>
+
+</html>
