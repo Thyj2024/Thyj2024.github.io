@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.glass2:hover {
+    box-shadow:
+        4px 4px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(7px);
+
+}
+
+.glass {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0);}
+.glass2 {
+    padding: 20px;
+    height: 100vh;
+
+    animation: am3 ease-in-out 1s 0.2s backwards;
+}
+
+.glass1 {
+    margin: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.con {
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+    overflow: hidden;
+}
