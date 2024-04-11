@@ -1,0 +1,58 @@
+#fixed {
+    background-image: url("../img/nature1.jpg");
+    height: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#fixed1,
+#fixed2 {
+    height: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.bgi {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    /* TODO:图片将被缩放以填充整个容器 */
+    background-position: center;
+}
+
+.btn-primary {
+    background-color: #6e48aa;
+    border: #6e48aa;
+}
+
+.header {
+    background-color: rgb(242, 242, 50);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid.text-center h4 {
+    font-size: 24px;
+    color: #333;
+    background: linear-gradient(145deg, #6e48aa, #9d50bb);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+body {
+    background-color: #eff3f9;
+}

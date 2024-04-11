@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>作品展示</title>
+    <link rel="icon" type="image/png" href="./img/icon.png">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/workpage.css" rel="stylesheet" />
+
+    </body>
+</head>
+
+<body>
+    <!-- TODO:NAVIGATION -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" style="padding: 0px;width: 100%;">
+        <div class="container-fluid header" style="padding: 0px;margin:0px">
+
+            <a href="index.html" target="_blank" class="navbar-brand"><img src="img/logo.png" alt=""
+                    style="width: 100px;margin-left: 10vw;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                style="margin-right: 50px;">
+                <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto" style="margin-right: 20vw;">
+                    <li class="nav-item dropdown" style="margin-right: 20px;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>网页设计作品</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#game">小游戏</a>
+                            <a class="dropdown-item" href="#page">页面</a>
+                            <a class="dropdown-item" href="#component">半成品</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="about.html" target="_blank" class="nav-link"><b>关于我</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 40px;background-color: #6e48aa;width: 100%;margin-top: 80px;">
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row" style="margin-top: 100px;margin-bottom: 100px;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
+                <!-- TODO:IMAGE-SLIDER -->
+                <div id="slides" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#slides" data-slide-to="0" class="active"></li>
+                        <li data-target="#slides" data-slide-to="1"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img\slide\star.png" alt="" style="width: 90%;height: 60vh;">
+                            <div class="carousel-caption">
+                                <h2 class="display-3">JS星空效果</h2>
+                                <h4>何夜无月？何处无竹柏？</h4>
+                                <a href="https://thyj2024.github.io/star" target="_blank"><button type="button"
+                                        class="btn btn-outline-light btn-lg">View Demo</button></a>
+                                <a href="https://thyj2024.github.io/star" target="_blank"><button type="button"
+                                        class="btn btn-primary btn-lg">View Demo</button></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img\slide\firework.png" alt="" style="width: 90%;height: 60vh;">
+                            <div class="carousel-caption">
+                                <h2 class="display-3">JS烟花效果</h2>
+                                <h4>东风夜放花千树。更吹落，星如雨。</h4>
+                                <a href="http://cnxa.top/yh/44.html" target="_blank"><button type="button"
+                                        class="btn btn-outline-light btn-lg">View Demo</button></a>
+                                <a href="http://cnxa.top/yh/44.html" target="_blank"><button type="button"
+                                        class="btn btn-primary btn-lg">View Demo</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center" style="padding-top: 15vh;">
+                <h1 class="display-4 title" style="font-weight: 800;font-size: 100px;color: #372454;"><b>江文珺</b></h1>
+                <h5 class="addition" style="color: #6e48aa;"><b><i>jiangwenjun</i></b></h5>
+                <br>
+                <p class="display-6" style="color: #6e48aa;">查看源码&nbsp;
+
+                    &darr;
+                </p>
+                <span><a href="https://github.com/Thyj2024/Thyj2024.github.io" target="_blank"><img
+                            src="./img/github.png" alt="" style="width: 15%;"></a></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- TODO:横线 -->
+    <!-- <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <hr class="my-4">
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div> -->
+
+
+
+    <!-- TODO:fixed background -->
+    <figure>
+        <div class="fixed-wrap">
+            <div id="fixed">
+            </div>
+        </div>
+    </figure>
+
+    <!-- TODO:fixed background -->
+    <figure>
+        <div class="fixed-wrap" id="game">
+            <div id="fixed1">
+            </div>
+        </div>
+    </figure>
+
+
+
+
+    <!-- TODO:GAME -->
+    <div class="container-fluid text-center" style="padding-top: 20px;padding-bottom: 40px;">
+        <h4><b>小游戏</b></h4>
+    </div>
+
+    <div class="container-fluid" style="padding-bottom: 40px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+                <div style="padding: 30px;">
+                    <div class="card mx-auto" style="margin-bottom: 20px;">
+                        <img src="img/work/guess.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">JS猜物品小游戏</h4>
+                            <p class="card-text">点击图片可以查看原始图片的相应部分，在输入框输入答案可以进行答案验证。</p>
+                            <a href="https://thyj2024.github.io/guess/" target="_blank"
+                                class="btn btn-outline-secondary">Open
+                                in a New Tab</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center text-center">
+                <div style="padding: 30px;">
+                    <div class="card mx-auto" style="margin-bottom: 20px;">
+                        <img src="img/work/adventure.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">新学期历险记</h4>
+                            <p class="card-text">基于js的dom操作制作而成的网页小游戏，由期末作业gui小程序改编而成。</p>
+                            <a href="https://thyj2024.github.io/game/" target="_blank"
+                                class="btn btn-outline-secondary">Open in
+                                a New Tab</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <!-- <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <hr class="my-4">
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div> -->
+    <!-- TODO:fixed background -->
+    <figure>
+        <div class="fixed-wrap" id="page">
+            <div id="fixed1">
+            </div>
+        </div>
+    </figure>
+
+    <!-- TODO:page -->
+    <div class="container-fluid text-center" style="padding-top: 20px;padding-bottom: 40px;">
+        <h4><b>页面作品</b></h4>
+    </div>
+    <div class="container-fluid ">
+        <div class="row text-center">
+            <!-- <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 text-center text-center"></div> -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card mx-auto" style="margin-bottom: 20px;">
+                    <img src="img/work/mywork.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">个人作品展示</h4>
+                        <p class="card-text">Bootstrap响应式布局（当前页面）</p>
+                        <a href="index.html" target="_blank" class="btn btn-outline-secondary">Open in a New Tab</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 text-center text-center">
+                <div class="card mx-auto" style="margin-bottom: 20px;">
+                    <img src="img/work/display.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">期末作品展示</h4>
+                        <p class="card-text">帮计算机老师制作的优秀作品展示页面</p>
+                        <a href="http://n.cnxa.top:30080/c/" class="btn btn-outline-secondary" target="_blank">Open in a
+                            New Tab</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card mx-auto" style="margin-bottom: 20px;">
+                    <img src="img/work/wonder.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">流浪地球网页</h4>
+                        <p class="card-text">初学时制作的静态网页，无响应式布局。</p>
+                        <a href="https://thyj2024.github.io/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%83.html"
+                            target="_blank" class="btn btn-outline-secondary">Open in a New Tab</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card mx-auto" style="margin-bottom: 20px;">
+                    <img src="img/work/medical.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">医疗服务网页</h4>
+                        <p class="card-text">很多地方写得不是很成熟，没有后端。</p>
+                        <a href="https://thyj2024.github.io/%E6%97%A0%E6%A1%86%E6%9E%B6%E5%89%8D%E7%AB%AF-%E5%8C%BB%E7%96%97%E6%9C%8D%E5%8A%A1%E7%BD%91%E7%AB%99%E5%8C%BB%E7%94%9F%E7%AB%AF/%E5%8C%BB%E7%94%9F%E7%AB%AF/pricing.html"
+                            target="_blank" class="btn btn-outline-secondary">Open in a New Tab</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <hr class="my-4">
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div> -->
+    <!-- TODO:fixed background -->
+    <figure>
+        <div class="fixed-wrap" id="component">
+            <div id="fixed2">
+            </div>
+        </div>
+    </figure>
+
+    <!-- TODO:Component -->
+    <div class="container-fluid text-center" style="padding-top: 20px;padding-bottom: 40px;">
+        <h4><b>半成品</b></h4>
+    </div>
+    <div class="container-fluid ">
+        <div class="row text-center">
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div style="padding: 30px;">
+                    <div class="card mx-auto" style="margin-bottom: 20px;">
+                        <img src="img/work/login.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">登录注册页面</h4>
+                            <p class="card-text">使用php语言实现与本地数据库的交互。</p>
+                            <a href="https://github.com/Thyj2024/Thyj2024.github.io/tree/main/%E5%9F%BA%E4%BA%8Ephp%E5%92%8C%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E8%AF%AD%E8%A8%80%E7%9A%84%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2"
+                                target="_blank" class="btn btn-outline-secondary">查看源码</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div style="padding: 30px;">
+                    <div class="card mx-auto" style="margin-bottom: 20px;">
+                        <img src="img/work/half.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">新学期历险记</h4>
+                            <p class="card-text">基于flask框架写的半成品</p>
+                            <a href="https://github.com/Thyj2024/Thyj2024.github.io/tree/main/flask%E6%A1%86%E6%9E%B6%E5%86%99%E7%9A%84%E6%9C%9F%E6%9C%AB%E7%94%9F%E5%AD%98%E6%B8%B8%E6%88%8F%E5%8D%8A%E6%88%90%E5%93%81"
+                                class="btn btn-outline-secondary">查看源码</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+    <!-- <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <hr class="my-4">
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div> -->
+
+
+
+
+    <!-- TODO:footer -->
+    <footer style="height: 50px;padding: 0;margin: 0;">
+        <p style="text-align: center;line-height: 50px;">没啥想说的，就这样吧。</p>
+    </footer>
+</body>
+
+</html>

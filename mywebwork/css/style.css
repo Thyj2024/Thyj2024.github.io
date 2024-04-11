@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700");
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+}
+
+footer {
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+}
+
