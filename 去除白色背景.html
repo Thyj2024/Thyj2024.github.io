@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Batch Image Transparency Tool with Automatic ZIP Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .custom-file-upload {
+            display: inline-block;
+            padding: 12px 24px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .custom-file-upload:hover {
+            background-color: #0056b3;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        #loadingText {
+            display: none;
+        }
+    </style>
+    <script>
+        function setupEventListeners() {
+            var fileInput = document.getElementById('imageInput');
+            var fileLabel = document.querySelector("label[for='imageInput']");
+
+            fileInput.addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    fileLabel.textContent = `${this.files.length} file(s) selected`;
+                    processImages(this.files);
+                }
+            });
+        }
+
+        function processImages(files) {
+            var loadingText = document.getElementById('loadingText');
+            loadingText.style.display = 'block';
+
+            var zip = new JSZip();
+            var count = 0; // Track the number of processed files
+
+            Array.from(files).forEach((file, index) => {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var img = new Image();
+                    img.onload = function() {
+                        var canvas = document.createElement('canvas');
+                        var ctx = canvas.getContext('2d');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0, img.width, img.height);
+
+                        var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                        var data = imageData.data;
+
+                        for (var i = 0; i < data.length; i += 4) {
+                            if (data[i] > 200 && data[i + 1] > 200 && data[i + 2] > 200) {
+                                data[i + 3] = 0; // Set alpha to 0
+                            }
+                        }
+                        ctx.putImageData(imageData, 0, 0);
+
+                        canvas.toBlob(function(blob) {
+                            zip.file(file.name, blob);
+                            count++;
+                            if (count === files.length) {
+                                zip.generateAsync({ type: 'blob' }).then(function(content) {
+                                    saveAs(content, 'processed_images.zip');
+                                    loadingText.style.display = 'none';
+                                    fileLabel.textContent = 'Choose files';
+                                });
+                            }
+                        });
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        window.onload = setupEventListeners;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>去除白色背景</h1>
+        <label for="imageInput" class="custom-file-upload">
+            点击转换
+        </label>
+        <input type="file" id="imageInput" multiple>
+        <p id="loadingText">Processing... Please wait.</p>
+    </div>
+</body>
+</html>
